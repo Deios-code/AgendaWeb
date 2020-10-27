@@ -1,0 +1,248 @@
+/* Custom Properties */
+:root {
+  --primario: #3F4045;
+  --secundario: #6DAEDB;
+  --primario-ocuro: #30292F;
+  --secundario-oscuro:#1B4353;
+  --blanco: #ffffff;
+  --titulos: "Montserrat", sans-serif;
+  --encabezados: "Lora", serif;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: var(--primario);
+  font-family: "Hind Madurai", sans-serif;
+  font-size: 18px;
+}
+h1 {
+  font-family: var(--titulos);
+  font-size: 35.16px;
+  margin: 0;
+  text-align: center;
+}
+h2 {
+  font-family: var(--encabezados);
+  font-size: 28.13px;
+  margin: 0; text-align: center;
+}
+/* h3 {
+  font-size: 22.5px;
+} */
+/* Globales */
+.contenedor {
+  max-width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 1250px) {
+    .contenedor {
+        max-width: 1200px;
+      }
+}
+.bg-secundario {
+  background-color: var(--secundario);
+}
+.bg-white{
+    background-color: white;
+}
+.sombra {
+  -webkit-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 5px 9px 0px rgba(0, 0, 0, 0.43);
+  border-radius: 1rem;
+}
+.btn{
+    font-size: 2rem;
+    text-decoration: none;
+}
+.btn-volver{
+    background-color: var(--secundario);
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    padding: .5rem 1rem;
+    font-size: 20px;
+    transition: background-color .3s ease-in-out;
+}
+.btn-volver:hover{
+    background-color: var(--secundario-oscuro);
+}
+/* contenedor barra */
+.contenedor-barra {
+    background-color: var(--primario-ocuro);
+    padding: 1rem;
+    color: white;
+  }
+/* formulario */
+form {
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  max-width: 100%;
+}
+@media (min-width: 900px) {
+    form {
+        padding: 3rem;
+      }  
+}
+form legend {
+  font-family: var(--titulos);
+  font-size: 30px;
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+form legend span {
+  font-family: var(--encabezados);
+  font-size: 20px;
+  margin-top: 0.5rem;
+  clear: both;
+  display: block;
+}
+form input{
+    padding: 10px;
+    border: none;
+    text-transform: capitalize;
+    margin-top: 0.5rem;
+    max-width: 100%;
+}
+.campos{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 1rem 0;
+}
+@media (min-width: 882px) {
+    .campos{
+        gap: 20px;
+    }
+}
+@media (min-width: 768px) {
+    .campos{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px) {
+    .campo{
+        max-width: 90%;
+    }
+}
+@media (min-width: 790px) {
+    .campo{
+        max-width: 100%;
+    }
+}
+@media (min-width: 501px) {
+    .enviar{
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+        align-items: flex-end;
+    }
+}
+.enviar input{
+    padding: 10px 40px;
+    background-color: var(--secundario-oscuro);
+    color: white;
+    transition: background-color .3s ease-in-out;
+}
+.enviar input:hover{
+    cursor: pointer;
+    background-color: #1a566e;
+}
+/* seccion contactos */
+.contactos{
+    margin: 2rem auto;
+    padding: 1rem;
+}
+@media (min-width: 768px) {
+    .contactos{
+        padding: 3rem;
+    }  
+}
+.contenedor-contactos{
+    max-width: 800px;
+    margin: 3rem auto;
+}
+.buscador{
+    width: 100%;
+    padding: 1rem;
+    height: 4rem;
+    margin: 2rem 0 1rem 0;
+    border: 1px solid #e1e1e1;
+}
+.contenedor-tabla{
+    overflow: auto;
+}
+.total-contacto{
+    color: var(--secundario-oscuro);
+    font-size: 1.5rem;
+    margin: 1rem 0 .2rem 0;
+}
+.total-contacto span{
+    font-weight: bold;
+}
+table{
+    width: 100%;
+    margin-top: 1rem;
+    border-collapse: collapse;
+    border: 1px solid #e1e1e1;
+}
+table thead{
+    background-color: var(--secundario-oscuro);
+}
+table thead th{
+    color: white;
+    padding: 1rem 0;
+    text-transform: uppercase;
+}
+table tbody td{
+    padding: 1rem;
+    text-align: center;
+}
+table button{
+    border: none;
+    background-color: transparent!important;
+}
+.btn-editar{
+    color: var(--secundario);
+}
+.btn-borrar{
+    color: var(--secundario-oscuro);
+    cursor: pointer;
+}
+/* pagina editar */
+.barra{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    align-items: center;
+}
+/* notificacion */
+.notificacion{
+    position: fixed;
+    top: .5rem;
+    right: 1rem;
+    padding: 1rem 2rem;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    color: white;
+}
+.error{
+    background-color: #DA4167;
+    color: #770924;
+}
+.correcto{
+    background-color: rgb(179,241,117);
+}
+.visible{
+    opacity: 1;
+}
